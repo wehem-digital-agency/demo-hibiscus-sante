@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rendez-vous — Clinique Les Hibiscus, Libreville</title>
+<meta name="description" content="Prenez rendez-vous en ligne : choisissez votre soin, votre jour et votre créneau. Confirmation immédiate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">LES<span> Hibiscus</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Accueil</a>
+      <a href="soins.html">Soins</a>
+      <a href="rendez-vous.html">Rendez-vous</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn--or" href="rendez-vous.html">Prendre rendez-vous</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="fil-ariane">Accueil / Rendez-vous</p>
+    <h1>Prenez rendez-vous</h1>
+    <p style="opacity:.85;max-width:600px">Choisissez votre soin, votre jour et votre créneau — confirmation immédiate.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="resa-grille">
+    <div class="reveal">
+      <form class="formulaire" id="form-resa" data-demo>
+        <label for="r-prestation">Votre soin *</label>
+        <select id="r-prestation" required></select>
+        <label for="r-date">Jour souhaité *</label>
+        <input id="r-date" type="date" required>
+        <label>Créneau *</label>
+        <div class="creneaux" id="creneaux"></div>
+        <input type="hidden" id="r-creneau">
+        <label for="r-nom">Votre nom *</label>
+        <input id="r-nom" type="text" required placeholder="Votre nom complet">
+        <label for="r-tel">Téléphone / WhatsApp *</label>
+        <input id="r-tel" type="tel" required placeholder="+241 …">
+        <button class="btn btn--prune" type="submit" style="width:100%;justify-content:center;margin-top:22px">Confirmer mon rendez-vous</button>
+        <p class="form-ok">✓ Rendez-vous envoyé ! Nous vous confirmons par WhatsApp dans l'heure.</p>
+      </form>
+    </div>
+    <aside>
+      <div class="encadre reveal">
+        <h3>Bon à savoir</h3>
+        <p style="font-size:.92rem;color:var(--gris)">🕘 7j/7 · 8h00 – 20h00 · urgences 24h/24</p>
+        <p style="font-size:.92rem;color:var(--gris)">📍 Avenue de Cointet, Libreville</p>
+        <p style="font-size:.92rem;color:var(--gris)">💳 Espèces, Mobile Money</p>
+        <p style="font-size:.92rem;color:var(--gris)">🩺 Apportez votre carnet de santé si vous en avez un</p>
+        <a class="tel" href="tel:+24107333333">+241 07 33 33 33</a>
+        <a class="btn btn--or" href="https://wa.me/24107333333" target="_blank" rel="noopener">Réserver via WhatsApp</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grille">
+      <div>
+        <p class="footer-logo">LES<span> Hibiscus</span></p>
+        <p style="opacity:.8;font-size:.92rem">Clinique à Libreville : médecine générale, pédiatrie, laboratoire, dentaire.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="soins.html">Soins</a>
+        <a href="rendez-vous.html">Rendez-vous</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Soins</h4>
+        <a href="soins.html">Généraliste</a>
+        <a href="soins.html">Pédiatrie</a>
+        <a href="soins.html">Laboratoire</a>
+        <a href="soins.html">Dentaire</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+24107333333">+241 07 33 33 33</a>
+        <a href="mailto:contact@hibiscus-sante.ga">contact@hibiscus-sante.ga</a>
+        <a href="contact.html">Avenue de Cointet, Libreville</a>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© <span id="annee"></span> Clinique Les Hibiscus — Tous droits réservés.</span>
+      <span>Site de démonstration conçu par <a href="https://wehem-agency.github.io/" style="display:inline">WEHEM Digital Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/24107333333" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.8-.9c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .5-.2 1.3z"/></svg>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
